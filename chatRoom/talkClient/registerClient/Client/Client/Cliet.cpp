@@ -16,7 +16,7 @@ int main(int argc, char*argv[])
 	connect(sClient, (SOCKADDR*)&serverAddr, sizeof(serverAddr));
 
 
-	//·¢ËÍÊı¾İ£º
+	//å‘é€æ•°æ®ï¼š
 	while (true){
 		int x;
 		char Register[1024];
@@ -24,14 +24,14 @@ int main(int argc, char*argv[])
 		printf("                                                                      \n");
 		printf("                         Welcome to my Register    ^_^                  \n");
 		printf("\n");
-		printf("                         Made by ÂŞÖ¾Åô  13055824                       \n");
+		printf("                         Made by maderluo                       \n");
 		printf("                                                                      \n");
 		printf("           ***********************************************************\n");
 		printf("\n");
 		printf("\n");
-		printf("         |                             ÇëÊäÈë£º                        |\n");
-		printf("         |                             1.×¢²á;                         |\n");
-		printf("         |                             2.ÍË³ö.                         |\n");
+		printf("         |                             è¯·è¾“å…¥ï¼š                        |\n");
+		printf("         |                             1.æ³¨å†Œ;                         |\n");
+		printf("         |                             2.é€€å‡º.                         |\n");
 
 		scanf("%d", &x);
 
@@ -41,13 +41,13 @@ int main(int argc, char*argv[])
 		{
 		case 1 :
 				{
-		          printf("ÇëÊäÈëÓÃ»§Ãû£¬ÃÜÂë£¬ÊÖ»úºÅ(ÇëÓÃÓ¢ÎÄ¶ººÅ¡°,¡±¸ô¿ª£©£º\n");
+		          printf("è¯·è¾“å…¥ç”¨æˆ·åï¼Œå¯†ç ï¼Œæ‰‹æœºå·(è¯·ç”¨è‹±æ–‡é€—å·â€œ,â€éš”å¼€ï¼‰ï¼š\n");
 		          scanf("%s",Register);
 		          send(sClient, Register, strlen(Register), 0);
-	  //½ÓÊÜÊı¾İ£º
+	  //æ¥å—æ•°æ®ï¼š
 		          int recSize = recv(sClient, message, 1024, 0);
 		          printf("%s\n", message);
-				  if (strcmp(message, "¸ñÊ½ÊäÈë²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë") == 0) break;
+				  if (strcmp(message, "æ ¼å¼è¾“å…¥ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥") == 0) break;
 			    };
 
 		case 2:
@@ -55,7 +55,7 @@ int main(int argc, char*argv[])
 				send(sClient, "exit", strlen("exit"), 0);
 				break;
 			default:
-				printf("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë\n");
+				printf("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥\n");
 		}
 		if (flag == 1) goto lexit;
 	}
